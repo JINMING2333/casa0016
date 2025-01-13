@@ -40,6 +40,24 @@ The project is developed based on Arduino IDE, and integrated after ensuring the
     *Chair status from left to right: blue light reminds the user to stand up 5 minutes in advance; the seat tilts after sitting for 30 minutes; white light indicates a crossed-leg posture; red light indicates leaning forward.*
 
 # Achievement
+https://github.com/user-attachments/assets/724f43f9-d20b-43c4-ae0d-05f0e35d009c
+
+# Future development
+1. Detection system optimization:  
+Current sitting posture monitoring systems are not comprehensive enough, especially for users with low weight or slight posture changes, who may not drive the chair to significantly recline. Future iterations could introduce more advanced monitoring systems; for example, According to Isaac Morales-Nolasco et al (2023), pressure mapping system with Convolutional Neural Networks (CNN) could achieve 85.4% accuracy when detecting three different postures. 
+2. Feedback system optimization: While servo works well for scaled-down prototype testing, their performance isn't good enough for real-size chair design. Linear actuators can be used instead to enhance the bearing capacity of the tilting mechanism. Further adjustment of the tilt angle and braking strength should be conducted to ensure that the physical intervention remains effective while ensuring user comfort. 
+3. Enhance interaction: Wireless communication and mobile application support can be involved in the future. Store and analyze user data with mobile apps allows users to track their sitting posture habits and adapt to different user needs. 
 
 
-## reference
+# References
+[1] Khanna, A., Kaur, S. (2020) Internet of Things (IoT), Applications and Challenges: A Comprehensive Review. Wireless Pers Commun, 114, 1687–1762. 
+[2] J. Beal, D. Pianini, M. Viroli (2015) Aggregate programming for the internet of things. Computer, 48 (9), 22–30.
+[3] Maswadi K, Ghani NA, Hamid S. (2022) Factors influencing the elderly’s behavioural intention to use smart home technologies in Saudi Arabia. PLoS ONE, 17(8): e0272525.
+[4] the Department of Health, State Government of Victoria, Australia. (2015) Posture. Channal, Better Health. 
+Available at: https://www.betterhealth.vic.gov.au/health/conditionsandtreatments/posture. (Accessed: 04 January 2025).
+[5] Pynt, J., Higgs, J., Mackey, M. (2001) Seeking the optimal posture of the seated lumbar spine. Physiotherapy Theory and Practice, 17(1), 5–21.
+[6] Duran AT, Friel CP, Serafini MA, Ensari I, Cheung YK, Diaz KM. (2023) Breaking Up Prolonged Sitting to Improve Cardiometabolic Risk: Dose-Response Analysis of a Randomized Crossover Trial. Med Sci Sports Exerc, 55(5), 847-855. 
+[7] Yilin Wang, Xiaoshan Lei, Yunchao Ma (2025) The Effect of swivel chairs on lumbar health in individuals with TFCLs sitting Habits: An analysis of lumbar disc Mechanical characteristics during Postural changes. Journal of Biomechanics, 178: 112435.
+[8] Kaiyuan Ma, Shunan Song, Lingling An, Shiwen Mao, Xuyu Wang (2024) APC: Contactless healthy sitting posture monitoring with microphone array. Smart Health, 32: 100463.
+[9] Isaac Morales-Nolasco, Sandra Arias-Guzman, Laura Garay-Jiménez (2024) A method for complex posture recognition during long-term sitting using neural networks and pressure mapping systems. Biomedical Signal Processing and Control, 95 (Part A): 106306. 
+
