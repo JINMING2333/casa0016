@@ -22,6 +22,7 @@ Read the data-sheet of each component to know their specific wiring requirements
 1. Voltage demand: All sensors can operate at 5V, so they can be powered directly through the 5V interface of the Arduino UNO board. Among them, since the resistance value of the photoresistor cannot be measured, it needs to be connected with a 10 kΩ fixed resistor in series to form a voltage division circuit, which converts the resistance change into a voltage signal and transmits it to the board. 
 2. LED Resistance calculation: Each channel of RGB LED needs a current-limiting resistor in series to prevent excessive current from damaging the component. 
 3.PCB Circuit: The breadboard is easy for prototype development, but the connection points are unstable. To improve reliability and reduce cable clutter, this project uses a strip PCB covered with parallel copper foil lines that can be used as separate wires or isolated by scraping off the copper foil. Different strips can be welded to form a path to complete the circuit design. All components are connected by welded male/female pins for flexible disassembly.
+
 ![Project Overview](img/library.png)
 ![Project Overview](img/circuit2.png)
 ![Project Overview](img/process.jpg)
@@ -50,14 +51,14 @@ Current sitting posture monitoring systems are not comprehensive enough, especia
 
 
 # References
-[1] Khanna, A., Kaur, S. (2020) Internet of Things (IoT), Applications and Challenges: A Comprehensive Review. Wireless Pers Commun, 114, 1687–1762. 
-[2] J. Beal, D. Pianini, M. Viroli (2015) Aggregate programming for the internet of things. Computer, 48 (9), 22–30.
-[3] Maswadi K, Ghani NA, Hamid S. (2022) Factors influencing the elderly’s behavioural intention to use smart home technologies in Saudi Arabia. PLoS ONE, 17(8): e0272525.
-[4] the Department of Health, State Government of Victoria, Australia. (2015) Posture. Channal, Better Health. 
+1. Khanna, A., Kaur, S. (2020) Internet of Things (IoT), Applications and Challenges: A Comprehensive Review. Wireless Pers Commun, 114, 1687–1762. 
+2. J. Beal, D. Pianini, M. Viroli (2015) Aggregate programming for the internet of things. Computer, 48 (9), 22–30.
+3. Maswadi K, Ghani NA, Hamid S. (2022) Factors influencing the elderly’s behavioural intention to use smart home technologies in Saudi Arabia. PLoS ONE, 17(8): e0272525.
+4. the Department of Health, State Government of Victoria, Australia. (2015) Posture. Channal, Better Health. 
 Available at: https://www.betterhealth.vic.gov.au/health/conditionsandtreatments/posture. (Accessed: 04 January 2025).
-[5] Pynt, J., Higgs, J., Mackey, M. (2001) Seeking the optimal posture of the seated lumbar spine. Physiotherapy Theory and Practice, 17(1), 5–21.
-[6] Duran AT, Friel CP, Serafini MA, Ensari I, Cheung YK, Diaz KM. (2023) Breaking Up Prolonged Sitting to Improve Cardiometabolic Risk: Dose-Response Analysis of a Randomized Crossover Trial. Med Sci Sports Exerc, 55(5), 847-855. 
-[7] Yilin Wang, Xiaoshan Lei, Yunchao Ma (2025) The Effect of swivel chairs on lumbar health in individuals with TFCLs sitting Habits: An analysis of lumbar disc Mechanical characteristics during Postural changes. Journal of Biomechanics, 178: 112435.
-[8] Kaiyuan Ma, Shunan Song, Lingling An, Shiwen Mao, Xuyu Wang (2024) APC: Contactless healthy sitting posture monitoring with microphone array. Smart Health, 32: 100463.
-[9] Isaac Morales-Nolasco, Sandra Arias-Guzman, Laura Garay-Jiménez (2024) A method for complex posture recognition during long-term sitting using neural networks and pressure mapping systems. Biomedical Signal Processing and Control, 95 (Part A): 106306. 
+5. Pynt, J., Higgs, J., Mackey, M. (2001) Seeking the optimal posture of the seated lumbar spine. Physiotherapy Theory and Practice, 17(1), 5–21.
+6. Duran AT, Friel CP, Serafini MA, Ensari I, Cheung YK, Diaz KM. (2023) Breaking Up Prolonged Sitting to Improve Cardiometabolic Risk: Dose-Response Analysis of a Randomized Crossover Trial. Med Sci Sports Exerc, 55(5), 847-855. 
+7. Yilin Wang, Xiaoshan Lei, Yunchao Ma (2025) The Effect of swivel chairs on lumbar health in individuals with TFCLs sitting Habits: An analysis of lumbar disc Mechanical characteristics during Postural changes. Journal of Biomechanics, 178: 112435.
+8. Kaiyuan Ma, Shunan Song, Lingling An, Shiwen Mao, Xuyu Wang (2024) APC: Contactless healthy sitting posture monitoring with microphone array. Smart Health, 32: 100463.
+9. Isaac Morales-Nolasco, Sandra Arias-Guzman, Laura Garay-Jiménez (2024) A method for complex posture recognition during long-term sitting using neural networks and pressure mapping systems. Biomedical Signal Processing and Control, 95 (Part A): 106306. 
 
