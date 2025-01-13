@@ -12,7 +12,7 @@
 ## Design workflow
 ![Project Overview](img/workflow.jpg)
 
-#Hardware
+# Hardware
 ## Components
 ![Project Overview](img/sensor1.png)
 ![Project Overview](img/sensor2.png)
@@ -20,19 +20,26 @@
 ## Wiring
 Read the data-sheet of each component to know their specific wiring requirements. Then, after calculation and analysis, connect the circuit.
 1. Voltage demand: All sensors can operate at 5V, so they can be powered directly through the 5V interface of the Arduino UNO board. Among them, since the resistance value of the photoresistor cannot be measured, it needs to be connected with a 10 kΩ fixed resistor in series to form a voltage division circuit, which converts the resistance change into a voltage signal and transmits it to the board. 
-2. LED Resistance calculation: Each channel of RGB LED needs a current-limiting resistor in series to prevent excessive current from damaging the component. The known power supply voltage V_in is 5V, the working current 〖 I〗_f of RGB LED is 20mA, and the working voltage 〖 V〗_f of each channel is red LED:  1.8-2.2V, green LED: 2.8-3.2V, blue LED: 2.8-3.2V. 
-According to Ohm's law: 
-R=(V_in-V_f)/I_f 
-Each channel can be calculated as follows: 
-R_r=(5-2)/0.02=150 Ω
+2. LED Resistance calculation: Each channel of RGB LED needs a current-limiting resistor in series to prevent excessive current from damaging the component. 
+3.PCB Circuit: The breadboard is easy for prototype development, but the connection points are unstable. To improve reliability and reduce cable clutter, this project uses a strip PCB covered with parallel copper foil lines that can be used as separate wires or isolated by scraping off the copper foil. Different strips can be welded to form a path to complete the circuit design. All components are connected by welded male/female pins for flexible disassembly.
+![Project Overview](img/library.png)
+![Project Overview](img/circuit2.png)
+![Project Overview](img/process.jpg)
 
-R_g=(5-3)/0.02=100 Ω
+# Software
+## Code testing
+The project is developed based on Arduino IDE, and integrated after ensuring the normal function of hardware and library through step by step testing. The basic process of the test is to compare the sensor data collected in real time and the threshold set by the experiment to judge the user's sitting posture. Then each state is defined as a Boolean value, and each actuator is fed back with a conditional statement. Taking the judgment and feedback of the cross-legged sitting posture as an example. 
+![Alert System](img/library2.png)
+    *The required libraries *
+![Alert System](img/example.png)
+    *Coding test example *
+## Data visualization
+![Alert System](img/port.jpg)
+    *The data from left to right: all sensor readings; user sitting timer (in seconds); sitting posture determination; seat tilt status.*
+![Alert System](img/achievement.jpg)
+    *Chair status from left to right: blue light reminds the user to stand up 5 minutes in advance; the seat tilts after sitting for 30 minutes; white light indicates a crossed-leg posture; red light indicates leaning forward.*
 
-R_b=(5-3)/0.02=100 Ω
+# Achievement
 
-	PCB Circuit: The breadboard is easy for prototype development, but the connection points are unstable. To improve reliability and reduce cable clutter (Fig. 4), this project uses a strip PCB covered with parallel copper foil lines that can be used as separate wires or isolated by scraping off the copper foil. Different strips can be welded to form a path to complete the circuit design. All components are connected by welded male/female pins for flexible disassembly.
-
-
-## reflection
 
 ## reference
