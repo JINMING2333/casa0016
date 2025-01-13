@@ -19,9 +19,12 @@
 
 ## Wiring
 Read the data-sheet of each component to know their specific wiring requirements. Then, after calculation and analysis, connect the circuit.
-1. Voltage demand: All sensors can operate at 5V, so they can be powered directly through the 5V interface of the Arduino UNO board. Among them, since the resistance value of the photoresistor cannot be measured, it needs to be connected with a 10 kΩ fixed resistor in series to form a voltage division circuit, which converts the resistance change into a voltage signal and transmits it to the board. 
-2. LED Resistance calculation: Each channel of RGB LED needs a current-limiting resistor in series to prevent excessive current from damaging the component. 
-3.PCB Circuit: The breadboard is easy for prototype development, but the connection points are unstable. To improve reliability and reduce cable clutter, this project uses a strip PCB covered with parallel copper foil lines that can be used as separate wires or isolated by scraping off the copper foil. Different strips can be welded to form a path to complete the circuit design. All components are connected by welded male/female pins for flexible disassembly.
+1. Voltage demand: 
+All sensors can operate at 5V, so they can be powered directly through the 5V interface of the Arduino UNO board. Among them, since the resistance value of the photoresistor cannot be measured, it needs to be connected with a 10 kΩ fixed resistor in series to form a voltage division circuit, which converts the resistance change into a voltage signal and transmits it to the board. 
+2. LED Resistance calculation: 
+Each channel of RGB LED needs a current-limiting resistor in series to prevent excessive current from damaging the component. 
+3.PCB Circuit: 
+The breadboard is easy for prototype development, but the connection points are unstable. To improve reliability and reduce cable clutter, this project uses a strip PCB covered with parallel copper foil lines that can be used as separate wires or isolated by scraping off the copper foil. Different strips can be welded to form a path to complete the circuit design. All components are connected by welded male/female pins for flexible disassembly.
 
 ![Project Overview](img/library.png)
 ![Project Overview](img/circuit2.png)
@@ -31,14 +34,14 @@ Read the data-sheet of each component to know their specific wiring requirements
 ## Code testing
 The project is developed based on Arduino IDE, and integrated after ensuring the normal function of hardware and library through step by step testing. The basic process of the test is to compare the sensor data collected in real time and the threshold set by the experiment to judge the user's sitting posture. Then each state is defined as a Boolean value, and each actuator is fed back with a conditional statement. Taking the judgment and feedback of the cross-legged sitting posture as an example. 
 ![Alert System](img/library2.png)
-    *The required libraries *
+*The required libraries *
 ![Alert System](img/example.png)
-    *Coding test example *
+*Coding test example *
 ## Data visualization
 ![Alert System](img/port.jpg)
-    *The data from left to right: all sensor readings; user sitting timer (in seconds); sitting posture determination; seat tilt status.*
+*The data from left to right: all sensor readings; user sitting timer (in seconds); sitting posture determination; seat tilt status.*
 ![Alert System](img/achievement.jpg)
-    *Chair status from left to right: blue light reminds the user to stand up 5 minutes in advance; the seat tilts after sitting for 30 minutes; white light indicates a crossed-leg posture; red light indicates leaning forward.*
+*Chair status from left to right: blue light reminds the user to stand up 5 minutes in advance; the seat tilts after sitting for 30 minutes; white light indicates a crossed-leg posture; red light indicates leaning forward.*
 
 # Achievement
 https://github.com/user-attachments/assets/724f43f9-d20b-43c4-ae0d-05f0e35d009c
@@ -46,8 +49,10 @@ https://github.com/user-attachments/assets/724f43f9-d20b-43c4-ae0d-05f0e35d009c
 # Future development
 1. Detection system optimization:  
 Current sitting posture monitoring systems are not comprehensive enough, especially for users with low weight or slight posture changes, who may not drive the chair to significantly recline. Future iterations could introduce more advanced monitoring systems; for example, According to Isaac Morales-Nolasco et al (2023), pressure mapping system with Convolutional Neural Networks (CNN) could achieve 85.4% accuracy when detecting three different postures. 
-2. Feedback system optimization: While servo works well for scaled-down prototype testing, their performance isn't good enough for real-size chair design. Linear actuators can be used instead to enhance the bearing capacity of the tilting mechanism. Further adjustment of the tilt angle and braking strength should be conducted to ensure that the physical intervention remains effective while ensuring user comfort. 
-3. Enhance interaction: Wireless communication and mobile application support can be involved in the future. Store and analyze user data with mobile apps allows users to track their sitting posture habits and adapt to different user needs. 
+2. Feedback system optimization: 
+While servo works well for scaled-down prototype testing, their performance isn't good enough for real-size chair design. Linear actuators can be used instead to enhance the bearing capacity of the tilting mechanism. Further adjustment of the tilt angle and braking strength should be conducted to ensure that the physical intervention remains effective while ensuring user comfort. 
+3. Enhance interaction: 
+Wireless communication and mobile application support can be involved in the future. Store and analyze user data with mobile apps allows users to track their sitting posture habits and adapt to different user needs. 
 
 
 # References
